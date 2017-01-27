@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="programmer.action" >
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.BATTERY_STATS" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.SEND_SMS" />
+    <uses-permission android:name="android.permission.RECEIVE_SMS" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name="programmer.action.MainActivity"
+            android:theme="@style/AppTheme.Dark" >
+        </activity>
+        <activity
+            android:name="programmer.action.LoginActivity"
+            android:label="@string/title_activity_login"
+            android:theme="@style/AppTheme.Dark" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="programmer.action.SignUpActivity"
+            android:label="Бүртгүүлэх"
+            android:theme="@style/AppTheme.Dark" />
+        <activity
+            android:name="programmer.action.SendMail"
+            android:label="@string/title_activity_send_mail"
+            android:theme="@style/AppTheme.Dark" >
+        </activity>
+        <activity
+            android:name="programmer.action.Call"
+            android:label="@string/title_activity_call"
+            android:theme="@style/AppTheme.Dark" >
+        </activity>
+        <activity
+            android:name="programmer.action.Web"
+            android:label="@string/title_activity_web"
+            android:theme="@style/AppTheme.Dark" >
+        </activity>
+        <activity
+            android:name="programmer.action.Message"
+            android:label="@string/title_activity_message"
+            android:theme="@style/AppTheme.Dark" >
+        </activity>
+
+        <receiver
+            android:name="programmer.action.MyReceiver"
+            android:enabled="true" >
+            <intent-filter>
+                <action android:name="android.provider.Telephony.SMS_RECEIVED" />
+            </intent-filter>
+        </receiver>
+
+        <activity
+            android:name="programmer.action.SplashScreen"
+            android:label="@string/title_activity_splash_screen"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.Splash" >
+
+        </activity>
+
+    </application>
+
+</manifest>
